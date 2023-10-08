@@ -1,7 +1,9 @@
 using IvanIvanovKt_31_20.Database;
+using IvanIvanovKt_31_20.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
+using System.Reflection.PortableExecutable;
 using static IvanIvanovKt_31_20.ServiceExtensions.ServiceExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +34,8 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.UseMiddleware<ExceptionHandlerMiddleware>();
 
     app.UseAuthorization();
 

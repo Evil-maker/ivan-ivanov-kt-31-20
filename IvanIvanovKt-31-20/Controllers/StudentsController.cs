@@ -18,7 +18,7 @@ namespace IvanIvanovKt_31_20.Controllers
             _studentService = studentService;
         }
 
-        [HttpPost(Name = "GetStudentsByGroup")]
+        [HttpPost("GetStudentsByGroup")]
         public async Task<IActionResult> GetStudentsByGroupAsync(StudentGroupFilter filter, CancellationToken cancellationToken = default)
         {
             var students = await _studentService.GetStudentsByGroupAsync(filter, cancellationToken);

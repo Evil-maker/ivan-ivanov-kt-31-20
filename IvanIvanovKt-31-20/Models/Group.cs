@@ -10,7 +10,7 @@ namespace IvanIvanovKt_31_20.Models
 
         public bool IsValidGroupName()
         {
-            return Regex.Match(GroupName, @"/\D*-\d*-\d\d/g").Success;
+            return Regex.Match(GroupName, @"\D*-\d*-\d\d").Success;
         }
     }
 }

@@ -18,7 +18,6 @@ namespace IvanIvanovKt_31_20.Tests
 
             //assert
             Assert.True(result);
-
         }
     }
 }

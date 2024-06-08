@@ -8,7 +8,7 @@ namespace IvanIvanovKt_31_20.ServiceExtensions
         {
             services.AddScoped<IStudentService, StudentService>();
 
-            return services;
+            return services; 
         }
     }
 }
